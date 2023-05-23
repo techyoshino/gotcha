@@ -1,0 +1,510 @@
+@charset "utf-8";
+
+#feas-admin .clearfix:after {
+  content: "."; 
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+#feas-admin .clearfix {
+  min-height: 1px;
+}
+#feas-admin * html .clearfix {
+  height: 1px;
+  /*¥*//*/
+  height: auto;
+  overflow: hidden;
+  /**/
+}
+#feas-admin table {
+	width: 100%;
+}
+#feas-admin .text-small {
+	font-size:  80%;
+	font-weight:  normal;
+}
+#feas-admin div.dashicons-feas:before {
+	content: '\f179';
+}
+
+/* =================
+	ヘッダー
+   ================= */
+#feas-admin #feas-head.wp-header-end {
+	visibility: visible;
+	margin-top: 0;
+}
+#feas-head {
+	background-image: url("images/bg-feas-header5@2x-min.jpg");
+	background-position: right top;
+	background-repeat: no-repeat;
+	background-size: 27%;
+	background-color: white;
+    margin-bottom: 15px;
+}
+#feas-head-upper {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8em 1em;
+}
+#feas-head-lower {
+    background-color: #ffffff;
+    height: auto;
+    padding: 0.5em 1em;
+}
+#feas-head a {
+	text-decoration: none;
+}
+#feas-head h1 {
+	margin: 0;
+	padding: 0;
+}
+#feas-head h1:before {
+    content: '\f179';
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    font: normal 40px/1 'dashicons';
+    vertical-align: middle;
+    margin-right: 0.3em;
+    color: #6dc1e6;
+}
+#feas-head #feas-logo {
+	margin-left: auto;
+    justify-content: center;
+    align-items: center;
+}
+#feas-head #feas-logo img {
+	width: 106px;
+    height: 27px;
+}
+#feas-head #feas-version {
+	float: left;
+    padding: 0.2em 0;
+}
+#feas-support {
+	font-size: 12px;
+	float: right;
+	width:  55%;
+	height:  auto;
+	text-align:  right;
+	padding: 0.2em 0;
+}
+#feas-support a {
+    padding-left: 0.5em;
+    margin-left: 0.5em;
+}	
+#feas-contents-header {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+#feas-admin h2 {
+	width: 100%;
+}
+#feas-admin.feas-search h2 {
+	width: 70%;
+}
+#feas-contents-header form {
+	width: 30%;
+	text-align: right;
+}
+#feas-contents-header form select {
+	width: 80%;
+}
+/*
+#feas-contents-header form input[type="submit"] {
+	width: 15%;
+}
+*/
+#feas-contents-header select,
+#feas-contents-header input[type="submit"] {
+	margin: 0.2em 0;
+}
+#feas-admin .icon {
+	content: '\f465';
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    font: normal 17px/1 'dashicons';
+    vertical-align: middle;
+    color: #46aae6;
+    margin-top: -3px;	
+}
+#feas-admin .icon_mail.icon:before {
+	content: '\f465';
+}
+#feas-admin .icon_fb.icon:before {
+	content: '\f305';
+}
+#feas-admin .icon_tw.icon:before {
+	content: '\f301';
+}
+
+/* ================
+	タブメニュー
+   ================ */
+#feas-admin .tab {
+	border-bottom: none;
+	margin: 0;
+}
+#feas-admin .tab li {
+	color: #0071a1;
+    float: left;
+    margin: 0 10px 0 0;
+    padding: 1em 4em;
+    border-bottom: none;
+    cursor: pointer;
+    list-style: none;
+    transition: .3s;
+    background-color: #f9f9f9;
+    font-weight: 600;
+}
+#feas-admin .tab li.active {
+	color: #24292e;
+    background: white;
+    cursor: auto;
+    border: 1px solid white;
+}
+#feas-admin table.widefat {
+	border: none;
+    box-shadow: none;
+}
+#feas-admin .area {
+	background-color: white;
+/* 	min-height: 300px; */
+}
+#feas-admin .area ul {
+	display: none;
+}
+#feas-admin .area ul.show {
+	display: block;
+	background-color: white;
+	margin: 0;
+	padding: 1em;
+	border: none;
+	box-shadow: 0 2px 2px rgba(0,0,0,.1);
+}
+
+/* ================
+	設定
+   ================ */
+#feas-admin form#fm tbody div.ele-wrap,
+#feas-admin form tbody div.ele-wrap  {
+	display: none;
+}
+#feas-admin form#fm tbody tr,
+#feas-admin form tbody tr  {
+	padding: 0.1em 0;
+}
+#feas-admin form#fm tbody tr.alternate,
+#feas-admin form tbody tr.alternate {
+	display: table-row;
+	background-color: #f9f9f9;
+}
+#feas-admin form#fm tbody tr.active,
+#feas-admin form tbody tr.active  {
+	background-color: #3b9bd9/*#509ad3*/;
+}
+#feas-admin form table.widefat thead th {
+	border-bottom: none;
+}
+#feas-admin form#fm tbody tr.active + tr > td,
+#feas-admin form tbody tr.active + tr > td {
+	border: 2px solid #3b9bd9;
+}
+#feas-admin form#fm tbody tr.grayout {
+	background-color: #d6d9dc;
+}
+#feas-admin form#fm tr.alternate td:first-child,
+#feas-admin form tr.alternate td:first-child  {
+	width: 3%;
+	text-align: center;
+	font-weight: bold;
+}
+/*
+#feas-admin form#fm tbody tr input[type="text"],
+#feas-admin form#fm tbody tr select {
+*/
+#feas-admin input[type="text"],
+#feas-admin select,
+#feas-admin textarea {
+	border: 1px solid #b1b1b1;
+}
+#feas-admin form#fm tbody tr.active input[type="text"],
+#feas-admin form#fm tbody tr.active select,
+#feas-admin form tbody tr.active input[type="text"],
+#feas-admin form tbody tr.active select {
+	border: 1px solid white;
+}
+#feas-admin .btn-toggle {
+	display: block;
+	width: 100%;
+	height: auto;
+	cursor: pointer;
+	font-size: 1.4em;
+}
+#feas-admin .btn-toggle:before {
+	content: "\f347";
+    -webkit-font-smoothing: antialiased;
+    font: normal 29px/1 'dashicons';
+    font-size: 1.2em;
+    color: #007cba;
+    line-height: 1.4;
+}
+#feas-admin tr.active .btn-toggle:before {
+	content: "\f343";
+	color: white;
+}
+#feas-admin tr.active .btn-toggle,
+#feas-admin tr.active td.description {
+	color: white;
+}
+#feas-admin #wpcontent select {
+	height: auto;
+}
+#feas-admin .ele-title {
+	background-color: #e8ebef;
+    padding: 0.3em 1em;
+    margin-bottom: 1em;
+}
+#feas-admin .ele-content {
+    padding: 0 1em;
+    margin-bottom: 1.2em;
+}
+#feas-admin .ele-content textarea {
+	display: block;
+}
+#feas-admin .ele-delete input[type="checkbox"] {
+	margin-right: 0;
+}
+#feas-admin .param-table table {
+	border-spacing: 4px;
+}
+#feas-admin .param-table th {
+	width: 20%;
+	background-color:  #FFFFFF;
+/* 	border-right: 1px solid #E1E1E1; */
+	border-bottom: 1px solid #E1E1E1;
+}
+#feas-admin .param-table td {
+	background-color:  #F9F9F9;
+/* 	border-bottom: 1px solid #E1E1E1; */
+}
+#feas-admin .param-table table tr:last-child th,
+#feas-admin .param-table table tr:last-child td {
+/* 	border-bottom: none; */
+}
+#feas-admin .action {
+	margin: 5px 0;
+}
+#feas-admin .button-primary.action {
+	margin: 1.2em 0;
+}
+#feas-admin table td {
+	padding: 0.5em;
+	vertical-align: middle;
+}
+.feas-members {
+	margin-bottom: 2px;
+}	
+.feas-members label {
+	display: inline-block;
+}
+	
+#feas-admin .grayout,
+#feas-admin .grayout input {
+	background-color: #d6d9dc;
+}
+#feas-admin .wrap-left { 
+	float: left;
+    width: 49.5%;
+    margin-right: 0.5%;
+}
+#feas-admin .wrap-right { 
+	float: right;
+    width: 49.5%;
+    margin-left: 0.5%;
+}
+#feas-admin .ele-content > div {
+	padding: 0.2em 0;
+}
+#feadvns_sort_target_cfkey,
+#feadvns_sort_target_cfkey_as,
+#feadvns_sort_target_cfkey_2nd,
+#feadvns_sort_target_cfkey_as_2nd {
+	display: none;
+}
+#feas-admin td h3 { /* 詳細項目の見出し */
+	margin: 0;
+	color: #595c5f;
+	font-size: 1.1em;
+}
+#feas-admin td h4 {
+	display: inline-block;
+    width: auto;
+    color: #595c5f;
+    background-color: white;
+    border-left: 0.2em solid #3b9bd9;
+    margin: 0 0 0.5em -0.9em;
+    padding: 0 0.7em;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+#feas-admin hr {
+	background-color: #58768c;
+    height: 1px;
+    border: none;
+    margin: 1.75em 0 -0.75em;
+}
+#feas-admin .ele-wrap button {
+    margin: 0 1em;
+    font-size: 85%;
+    padding: 0.2em 1em;
+    min-height: auto;
+    line-height: 2;
+}
+#feas-admin .disp_op_order_freetext h4 {
+	display: block;
+}
+#feas-admin .disp_op_order_freetext textarea {
+	display: inline-block;
+}
+#feas-admin .disp_op_order_freetext button {
+	display: inline-block;
+}
+#feas-code-sample h4 {
+	background-color: #e8ebef;
+    padding: 0.3em 1em;
+    margin-bottom: 1em;
+}
+
+/* ================
+	プレビュー
+   ================ */
+#feas-pv {
+	margin: 10px 0;
+	height: auto;
+}
+#feas_pv_upper {
+	display: flex;
+}
+#feas_pv_lower {
+	border: 1px solid #E1E1E1;
+	padding: 1em;
+	height: 50vh;
+	line-height: 1;
+}
+#feas_pv_upper .pv_nav {
+	width: 50%;
+    display: flex;
+}
+#feas_pv_upper .pv_option {
+	width: 50%;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+#feas_pv_upper .pv_option input[type="checkbox"] {
+	margin: 0 0.2em 0 1em;
+}
+#feas-pv h3 {
+	margin:  0 0 0.5em;
+}
+	
+#feas-pv p {
+	margin:  0 0 0.5em;
+}
+#feas-pv iframe {
+	height: 50vh;
+}
+#feas-pv .pv_nav span {
+	width: 6em;
+    background-color: #f9f9f9;
+    color: #0071a1;
+    padding: 0.5em 1em;
+    text-align: center;
+    margin-right: 0.2em;
+}
+#feas-pv .pv_nav span a {
+	text-decoration: none;
+}
+/* ================
+	コード
+   ================ */	
+#feas-code-sample {
+	margin: 10px 0;
+}
+	
+#feas-code-sample textarea {
+	font-size: 12px;
+	background-color: #FFFFCC;
+}
+#feas-admin .CodeMirror {
+	height: 50vh;
+}
+#feas-admin .style-wrap {
+	padding: 1em;
+	background-color: white;
+}
+
+/*====================
+	表示コントロール
+  ====================*/
+#feas-admin .term-more input[type=text] {
+	width: 8em;
+}
+#feas-admin #cat_more_setting_1 .ele-content > div {
+	margin-bottom: 0.2em;
+}
+#feas-admin #cat_more_setting_1 label {
+	display: inline-block;
+	width: 4em;
+}
+#feas-admin #cat_more_setting_1_2nd label {
+	width: auto;	
+}
+#feas-admin .meta-more label {
+	display: inline-block;
+}
+#feas-admin .term-more h4 {
+	display: inline-block;
+	width: 3em;
+}
+#feas-admin .term-more label,
+#feas-admin .keyword-more label {
+	display: block;
+}
+
+/* まず非表示にして、jQueryでコントロール */
+#feas-admin .ctl,
+#feas-admin .sOrder {
+	display: none;
+}
+/* ============================
+	ソート
+   ============================ */
+#feas-admin .ctl.cfkey,
+#feas-admin .ctl.cfas {
+	display: none;	
+}
+
+/* ============================
+	キャッシュ
+   ============================ */
+#feas-admin.feas-cache .param-table {
+	padding: 1em;
+	background-color: white;
+}
+#feas-admin.feas-cache th {
+	white-space: nowrap;
+}
+#feas-admin.feas-cache .sub {
+	font-size: 0.9em;
+	margin-bottom: 0.2em;
+}
+#feas-admin.feas-cache input[name="feas_cache_time"] {
+	margin-right: 0.3em;
+}

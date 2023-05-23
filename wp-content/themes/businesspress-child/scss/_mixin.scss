@@ -1,0 +1,205 @@
+@charset "UTF-8";
+
+
+@mixin breakpoint($point) {
+	@if $point == desktop {
+		@media (min-width: 70em) { @content ; }
+	}
+	@else if $point == laptop {
+		@media (min-width: 64em) { @content ; }
+	}
+
+    @else if $point == company {
+        //@media (min-width: 50em) { @content ; }
+        //@media (min-width: 768px) { @content ; }
+        @media (min-width: 1280px) { @content ; }
+    }
+
+
+
+	@else if $point == tablet {
+		//@media (min-width: 50em) { @content ; }
+		//@media (min-width: 768px) { @content ; }
+		@media (max-width: 989px) { @content ; }
+	}
+
+    @else if $point == app_pc {
+        //@media (min-width: 50em) { @content ; }
+        //@media (min-width: 768px) { @content ; }
+        @media (min-width: 801px) { @content ; }
+    }
+
+    @else if $point == app {
+        //@media (min-width: 50em) { @content ; }
+        //@media (min-width: 768px) { @content ; }
+        @media (max-width: 800px) { @content ; }
+    }
+//	@else if $point == phablet {
+//		 @media (min-width: 37.5em)  { @content ; }
+//	}
+	@else if $point == mobile {
+		//@media (max-width: 37.5em)  { @content ; }
+		@media (max-width: 799px)  { @content ; }
+	}
+}
+
+//radius_boxは関数名、()の中はcssから使うときの変数名
+@mixin radius_box($bg: white, $bold: 1px, $color: #ccc) {
+	background-color: $bg;
+	border-radius: 6px;
+	border: solid $bold $color;
+	overflow: hidden;
+}
+
+@mixin border_btm($color: $clr_main) {
+	padding-bottom: 5px;
+	border-bottom: solid 2px $color;
+}
+
+
+//flex
+
+
+@mixin flex($justify:0, $align:0, $wrap:0, $wrap_align:0, $column:0) {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+ 
+    // justify-content水平方向揃え（第一引数）
+    @if $justify == start { // 左揃え
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+    } @else if $justify == end { // 右揃え
+        -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+    } @else if $justify == center { // 中央揃え
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    } @else if $justify == between { // 両端配置
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    } @else if $justify == around { // 均等配置
+        -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+    }
+ 
+    // align-items垂直方向揃え（第二引数）
+    @if $align == start { // 上揃え
+        -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+    } @else if $align == end { // 下揃え
+        -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+        align-items: flex-end;
+    } @else if $align == center { // 中央揃え
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+    } @else if $align == baseline { // ベースライン
+        -webkit-align-items: baseline;
+        -ms-flex-align: baseline;
+        align-items: baseline;
+    } @else if $align == stretch { // 高さ揃え
+        -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+    }
+ 
+    // flex-wrap子要素の折り返し設定（第三引数）
+    @if $wrap == nowrap { // 折り返ししない
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    } @else if $wrap == wrap { // 上から下
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    } @else if $wrap == reverse { // 下から上
+        -webkit-flex-wrap: wrap-reverse;
+        -ms-flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse;
+    }
+ 
+    // align-content複数行設定（第四引数）
+    @if $wrap_align == start { // 上揃え
+        -webkit-align-content: flex-start;
+        -ms-flex-line-pack: start;
+        align-content: flex-start;
+    } @else if $wrap_align == end { // 下揃え
+        -webkit-align-content: flex-end;
+        -ms-flex-line-pack: end;
+        align-content: flex-end;
+    } @else if $wrap_align == center { // 中央揃え
+        -webkit-align-content: center;
+        -ms-flex-line-pack: center;
+        align-content: center;
+    } @else if $wrap_align == between { // 両端配置
+        -webkit-align-content: space-between;
+        -ms-flex-line-pack: justify;
+        align-content: space-between;
+    } @else if $wrap_align == around { // 均等配置
+        -webkit-align-content: space-around;
+        -ms-flex-line-pack: distribute;
+        align-content: space-around;
+    } @else if $wrap_align == stretch { // 高さ揃え
+        -webkit-align-content: stretch;
+        -ms-flex-line-pack: stretch;
+        align-content: stretch;
+    }
+ 
+    // 縦並び（第五引数）
+    @if $column == 1 {
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+}
+
+/*
+▼ ①コンパイル前（横並び、両端配置）
+
+@include flex(between);
+
+
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+
+
+▼ ②コンパイル前（横並び、折り返し）
+@include flex(0, 0, wrap);
+
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+   
+
+▼ ③コンパイル前（縦並び、中央寄せ）
+
+@include flex(0, center, 0, 0, 1);
+
+
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+*/
+    

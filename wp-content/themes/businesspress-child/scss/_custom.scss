@@ -1,0 +1,1827 @@
+@chareset "UTF-8";
+
+/* Basecolor
+------------------------------------------------------------ */
+
+
+$main-color: #72D5D1;
+$sub-color: #EFFAFA;
+
+$base-color: #E95532;
+$orange-color: #E95532;
+$green-color: #02ae7a;
+$blue-color: #0c96d5;
+
+
+
+/* Base
+------------------------------------------------------------ */
+
+.entry-content{
+     h2{
+        
+     }
+}
+.btn{
+   
+    width: 280px;
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+
+}
+
+.bold{
+    font-weight:bold;
+}
+
+.container{
+    @include breakpoint(mobile){
+        padding: 0px 20px;
+    }
+}
+
+
+/* breadcrumb
+------------------------------------------------------------ */
+
+.breadcrumb {
+    border-bottom: 1px solid #ddd;
+}
+
+.breadcrumb li {
+    display: inline-block;
+    padding-left: 16px;
+    padding-bottom: 10px;
+}
+.breadcrumb li:first-child {
+    margin-left: 0;
+    padding-left: 0;
+    background: none;
+}
+
+
+
+
+
+/* header
+------------------------------------------------------------ */
+
+.main-header{
+   // padding: 0 !important;
+
+}
+
+.main-navigation a{
+    font-weight: bold;
+}
+
+.jumbotron{
+    background-color: unset !important;
+}
+
+.jumbotron-overlay{
+    background-color: unset !important; 
+}
+
+.jumbotron-content{
+    text-align: left !important;
+}
+
+h2.jumbotron-title{
+    color: #000 !important;
+    text-shadow:none !important;
+}
+
+
+/* 
+------------------------------------------------------------ */
+
+
+/* contents
+------------------------------------------------------------ */
+
+#content{
+	.content-area{
+
+		margin:0 auto;
+
+	}
+}
+
+.site-content{
+    padding-bottom: 50px;
+}
+
+
+/* 
+------------------------------------------------------------ */
+
+
+/* TOPページ
+------------------------------------------------------------ */
+
+.top-cont-second{
+    margin: 0 auto;
+
+    @include breakpoint(mobile){
+        padding: 0px 20px;
+    }
+
+    img{
+        
+    }
+}
+
+.top-cont-third{
+    background:$main-color ;
+
+    .container-in{
+        text-align: center;
+        overflow: hidden;
+        padding: 50px 0px 50px;
+        position: relative;
+
+        h2{
+            padding: 10px 0 40px;
+            margin: 0;
+            color: #fff;
+        }
+        .container--in{
+            color: #fff;
+            font-size: 16px;
+
+            @include breakpoint(mobile){
+                font-size: 14px;
+            }
+        }
+
+        .about-btn{
+            a{
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+
+        img{
+            position:absolute;
+            top: 10%;
+            right: 0;
+        }
+    }
+}
+
+
+.top-cont-four{
+
+    .container-in{
+        text-align: center;
+        overflow: hidden;
+        padding: 100px 0px 100px;
+        
+        h2{
+            padding: 0 0 40px;
+            margin: 0;
+            
+        }
+        .container--in{
+
+            display: flex; /* flexbox */
+            flex-wrap: wrap; /* 折返し指定 */
+            gap: 4% 4%; /* 余白 */
+
+            @include breakpoint(mobile){
+                display: block;
+            }
+
+            .container---in{
+                width: 48%;
+                margin-bottom: 4%;
+
+                @include breakpoint(mobile){
+                    width: 100%;
+                }
+
+                .post-thumbnail{
+
+                    // height: 300px;
+                    height: auto;
+                    overflow: hidden;
+
+                    @include breakpoint(mobile){
+                        height: auto;
+                    }
+
+                    a{
+                        display: block;
+                    }
+    
+                    img{
+                        width: 100%;
+    
+                    }
+
+                }
+
+
+                .container---in-top{
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 20px 0px 0px;
+
+                    .contents-L{
+                        h3{
+                            margin: 0;
+                            padding: 0;
+                            font-size: 25px;
+
+                            a{
+                                color: #000;
+                                text-decoration: none;
+                            }
+                        }
+                        
+                    }
+
+                    .contents-R{
+                        span{
+                            background: $main-color;
+                            padding: 5px 20px;
+                            border-radius: 20px;
+                            color: #fff;
+                            font-weight: bold;
+                            font-size: 14px;
+                        }
+                    }
+                }
+
+                .container---in-bottom{
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 0px 0px;
+
+                    .contents-L{
+
+                        .List{
+                            margin: 0;
+
+                        }
+
+                        .List-Item {
+                            display: inline;
+                            font-size: 14px;
+
+                            a{
+                                display: inline;
+                                color: #000;
+                                text-decoration: none;
+                            }
+                          }
+
+                        .List02 .List-Item::after {
+                            content: '/';
+                          }
+                          .List-Item:last-child::after {
+                            content: '';
+                          }
+                          .List-Item-Link {
+                            display: inline-block;
+                            text-decoration: none;
+                            color: inherit;
+                          }
+                    }
+
+                    .contents-R{
+                        span{
+                            font-size: 14px;
+                        }
+                    }
+                }
+
+            }
+                        
+        }
+       
+    }
+
+    .is-hidden {
+        visibility: hidden;
+        opacity: 0;
+        height: 0;
+        margin: 0 0px;
+        padding: 0;
+        width: 0 !important;
+        display: none;
+      }
+
+      button{
+          background: $main-color;
+          width: 240px;
+          font-weight: bold;
+          border-radius: 30px;
+      }
+
+      button:focus{
+        background: $main-color;
+      }
+}
+
+.top-cont-five{
+    .contents-top{
+        background: $main-color;
+        padding: 20px 0px;
+        text-align: center;
+
+        h2{
+            color: #fff;
+            padding: 0;
+            margin: 0;
+            font-size: 20px;
+        }
+    }
+
+    .contents-bottom{
+        background: #f4f5f6;
+        overflow: hidden;
+        padding: 50px 0px;
+
+        .container{
+
+            display: flex; /* flexbox */
+            flex-wrap: wrap; /* 折返し指定 */
+            //gap: 4% 4%; 
+
+            .contents-L{
+
+                width: 50%;
+
+                @include breakpoint(mobile){
+                    width: 100%;
+                }
+
+                .seach_page_col_in{
+                    select{
+                        width: 100%;
+                        border: solid 3px #000;
+                    }
+
+                    input[type="submit"]{
+                        margin-top: 20px;
+                    }
+                }
+
+            }
+
+            .contents-R{
+                width: 50%;
+                text-align: center;
+
+                @include breakpoint(mobile){
+                    width: 100%;
+                }
+            }
+
+        }
+        
+    }
+
+}
+
+.top-cont-six{
+
+    h2{
+        text-align: center;
+    }
+
+    .swiper-wrapper{
+       
+        .swiper-slide{
+
+            .card{
+                img{
+                    width: 100%;
+                }
+            }
+
+            .card-body{
+                h5{
+                    margin: 10px 0px;
+                    padding: 0;
+                }
+            }
+
+        }
+    }
+
+    
+
+    .swiper-pagination{
+        position: static;
+    }
+}    
+
+
+/* 詳細ページ
+------------------------------------------------------------ */
+
+.detail-head{
+
+    .jumbotron-content{
+
+        @include breakpoint(mobile){
+            padding:10px;
+        }
+
+        h2{
+
+        }
+    }
+
+    .List{
+        margin: 0;
+
+        a{
+            font-size: 13px;
+            color: #000;
+        }
+
+        span{
+            padding: 0px 10px;
+            font-size: 13px;
+        }
+    }
+
+    .List-Item {
+        display: inline;
+        font-size: 14px;
+      }
+
+    .List02 .List-Item::after {
+        content: '/';
+        font-size: 1.3rem;
+        padding: 10px;
+      }
+      .List-Item:last-child::after {
+        content: '';
+      }
+      .List-Item-Link {
+        display: inline-block;
+        text-decoration: none;
+        color: inherit;
+        font-size: 1.3rem;
+      }
+
+
+}
+
+.detail-slide{
+
+    margin-bottom: 50px;
+    max-width: 1120px;
+    margin: 0 auto;
+    overflow: hidden;
+
+
+    .swiper-wrapper{
+        justify-content: center;
+
+        @include breakpoint(mobile){
+            justify-content:unset;
+        }
+
+
+        .swiper-slide{
+            img{
+                width: 100%;
+            }
+        }
+    }
+    .swiper-pagination{
+        position: static;
+    }
+
+    .card-body{
+        .card-title{
+
+            @include breakpoint(mobile){
+                padding:10px 20px;
+            }
+
+        }
+    }
+}
+
+.detail-cont{
+    background: $sub-color;
+  //  margin-top: 100px;
+  //  padding: 50px 0px;
+
+    @include breakpoint(mobile){
+        margin-top: 50px;
+    }
+
+    .container{
+
+  
+        
+        h2{
+            text-align: center;
+            padding: 50px 0px;
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
+
+        .detail-cont-one{
+
+        }
+    }
+    
+}
+
+.detail-cont-one{
+    .youtube {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+      }
+      .youtube iframe {
+        width: 100%;
+        height: 100%;
+      }
+
+}
+
+.detail-cont-two{
+
+    padding-bottom: 50px;
+
+    .detail-cont-two-head{
+        display: flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        width: 100%;
+        gap: 0px 40px;
+
+    @include breakpoint(mobile){
+        display: block;
+    }
+
+        .detail-cont-two-l{
+            flex: 3;
+            margin: 0px;
+            padding: 30px 0;
+
+
+            h3{
+                text-align: left;
+                padding: 0;
+                margin: 30px 0px 0px;
+            }
+
+            p{
+                margin: 10px 0px;
+                font-size: 13px;
+            }
+
+            a{
+                font-size: 10px;
+            }
+
+            .detail-author{
+                text-align: right;
+                padding: 0px 20px;
+                font-size: 14px;
+
+                @include breakpoint(mobile){
+                    font-size: 10px;
+                    font-weight: bold;
+                }
+            }
+            
+        }
+
+        .detail-cont-two-r{
+        
+            flex: 1;
+            margin: 10px;
+            padding: 50px 0;
+
+            img{
+
+                @include breakpoint(mobile){
+                    width: 100%;
+                }
+                
+            }
+        }
+    }
+
+    .detail-cont-two-bottom{
+        background: #fff;
+        border-radius: 40px;
+        border: 2px solid #000;
+        display: flex;
+        justify-content: space-between;
+        
+        @include breakpoint(mobile){
+            display: block;
+            border: none;
+            border-radius: unset;
+            text-align: center;
+        }
+
+        dl{
+            display: flex;
+            align-items: center;
+            padding: 0px 50px;
+
+            @include breakpoint(mobile){
+                display: block;
+            }
+    
+
+
+            dt{
+                padding: 0;
+                margin: 0;
+                position: relative;
+                font-weight: normal;
+            }
+            dt:after{
+                
+                content: ":";
+                width:3px;
+                padding: 0px 10px;
+                
+                @include breakpoint(mobile){
+                    display: none;
+                }
+                
+            }
+            dd{
+                padding: 0;
+                margin: 0;
+                font-weight: bold;
+            }
+        }
+
+        button.detail-school-btn{
+            padding: 10px;
+            border-radius: 25px;
+            margin: 10px;
+            background: $main-color;
+
+            a{
+                font-weight: bold;
+                text-decoration: none;
+                font-size: 16px;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.detail-info{
+    
+    table{
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+
+        th{
+            width: 20%;
+            background-color:unset;
+            padding-left: 30px;
+
+            
+         
+        }
+    }
+      
+    table th,table td{
+        // padding: 10px 0;
+        border: unset;
+        @include breakpoint(mobile){
+            display: block;
+            width: 100%;
+            padding: 5px;
+        }
+    }
+      
+    table tr:nth-child(odd){
+        background-color: #eee
+    }
+
+    .detail-return-btn{
+        padding: 0px;
+        border-radius: 25px;
+        background: $main-color;
+        margin: 60px auto;
+        display: block;
+        width: 250px;
+
+        a{
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            // width: 100%;
+            padding: 10px;
+        }
+    }
+}
+
+/*  CONTACTページ
+------------------------------------------------------------ */
+
+.contact{
+
+    .important-txt{
+        text-align: center;
+        font-weight: bold;
+
+        p{
+            display: block;
+            width: 100%;
+            margin: 50px 0px;
+        }
+    }
+
+    .jumbotron{
+        max-width: 720px;
+        margin: 0 auto;
+
+        .jumbotron-content{
+            padding-bottom: 0px !important;
+        }
+
+        h2.jumbotron-title {
+            text-align: center;
+        }
+
+    }
+
+   
+dl.inquiry{
+
+        dt{
+            width: 100%;
+            display: block;
+            margin-bottom:0;
+
+            .important-cap{
+                position: relative;
+                top: -5px;
+            }
+
+        }
+        dd{
+            width: 100%;
+            display: block;
+            margin: 0px 0px 30px;
+        }
+    }
+
+    input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="tel"], textarea {
+        border: solid 3px #000;
+        margin-top: 0.6em;
+        padding: 0.6em;
+    }
+
+    .important-cap{
+        color: $main-color;
+    }
+
+    input[type="submit"]{
+        width: 300px;
+        font-size: 20px;
+        border-radius: 30px;
+        background: #72D5D1;
+        margin: 0 auto;
+        display: block;
+        padding: 20px;
+    }
+    
+}
+
+
+
+
+/* アーカイブページ
+------------------------------------------------------------ */
+
+.archive-cont{
+    .loop-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0 4%; /* 余白 */
+
+        .post-full:after{
+            display: none;
+        }
+
+        .post-full{
+            width: 48%;
+
+            @include breakpoint(mobile){
+                width: 100%;
+            }
+
+            .entry-header{
+                margin-bottom: 0;
+            }
+
+            .post-thumbnail{
+                height: auto;
+                overflow: hidden;
+
+                @include breakpoint(mobile){
+                    height: auto;
+                }
+            }
+
+          
+
+            .container---in-top{
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 20px 0px 0px;
+
+                    .contents-L{
+                        h3{
+                            margin: 0;
+                            padding: 0;
+                            font-size: 25px;
+
+                            a{
+                                color: #000;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+
+                    .contents-R{
+                        span{
+                            background: $main-color;
+                            padding: 5px 20px;
+                            border-radius: 20px;
+                            color: #fff;
+                            font-weight: bold;
+                            font-size: 14px;
+                        }
+                    }
+                }
+
+                .container---in-bottom{
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 0px 0px;
+
+                    .contents-L{
+
+
+                        .List-Item {
+                            display: inline;
+                            font-size: 14px;
+
+                            span{
+                                padding: 0 5px;
+                            }
+
+                            a{
+                                color: #000;
+                                text-decoration: none;
+                            }
+                          }
+
+
+                        /*
+                        .List{
+                            margin: 0;
+
+                        }
+
+                        .List-Item {
+                            display: inline;
+                            font-size: 14px;
+                          }
+
+                        .List02 .List-Item::after {
+                            content: '/';
+                          }
+                          .List-Item:last-child::after {
+                            content: '';
+                          }
+                          .List-Item-Link {
+                            display: inline-block;
+                            text-decoration: none;
+                            color: inherit;
+                          }
+                          */
+                    }
+
+                    .contents-R{
+                        span{
+                            font-size: 14px;
+                        }
+                    }
+                }
+                
+        }
+
+    }
+}
+
+
+
+
+/*  ABOUTページ
+------------------------------------------------------------ */
+
+/*
+共通
+--------------*/
+.about-third{
+    .site-content{
+        p{
+            @include breakpoint(mobile){
+               text-align: left;
+            } 
+        }
+    }
+}
+
+
+
+.about{
+
+    .site-header{
+        margin-bottom: 0rem;
+    }
+
+    .jumbotron{
+
+        margin-top: 100px;
+
+        @include breakpoint(mobile){
+            margin-top:0px;
+        }
+
+
+
+        .jumbotron-overlay{
+            background: $main-color !important;
+            padding: 10px;
+
+            .jumbotron-content{
+                padding-bottom: 10px;
+                padding-top: 10px;
+            }
+            .jumbotron-title{
+                font-size: 24px;
+                color: #fff !important;
+                text-align: center;
+
+                @include breakpoint(mobile){
+                   text-align: left;
+                   font-size: 20px;
+                    
+                }
+            }
+        }
+
+    }
+    .about-first{
+        .container{
+            //background-image: url("images/about1-img.png");
+            
+            background: url(https://chusho-gotcha.com/wp-content/themes/businesspress-child/images/about1-img.png);
+            // height: 50vw;
+            background-repeat: no-repeat;
+
+            @include breakpoint(mobile){
+                height: auto;
+                background-size: contain;
+
+            }
+            
+        
+            .site-content{
+                text-align: center;
+                font-weight: bold;
+                font-size: 20px;
+                padding: 100px 0px 0px;
+
+                @include breakpoint(mobile){
+                    text-align: left;
+                    font-size: 17px;
+                    padding: 50px 0px 0px;
+
+    
+                }
+
+            }
+
+        }
+    }
+
+    .about-second{
+
+        .site-content{
+            max-width: 960px;
+
+            @include breakpoint(mobile){
+               padding: 0;
+
+            }
+
+            h3{
+                text-align: center;
+                border-top: 2px solid #000;
+                border-bottom: 2px solid #000;
+                padding: 20px 0px;
+               
+                @include breakpoint(mobile){
+                    text-align: left;
+    
+                }
+            }
+
+            .site-content-in{
+                display: flex;
+                gap: 0px 80px;/*縦20px、横30pxの指定*/
+                margin: 100px 0px;
+
+                @include breakpoint(mobile){
+                    display: block;
+                    margin: 50px 0px;
+    
+                }
+
+                .site-content-in-cont{
+                    width: calc(100% - 300px);
+
+                    @include breakpoint(mobile){
+                        width: 100%;
+        
+                    }
+
+                    h4{
+                        font-size:20px ;
+                        margin: 0 0 30px;
+                    }
+                }
+
+                .site-content-in-img{
+                    width: 300px;
+
+                    @include breakpoint(mobile){
+                        width: 100%;
+        
+                    }
+
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+    }
+    .about-btn{
+
+        margin: 100px 0px 0px;
+        .site-content{
+            text-align: center;
+
+            .button{
+                display: inline-block;
+                margin: 0 10px;
+                background: $main-color;
+                color: #fff;
+                text-decoration: none;
+                padding: 10px 50px;
+                border-radius:30px;
+
+                @include breakpoint(mobile){
+                    margin: 10px 0px;
+                    padding: 10px 0px;
+                    width: 100%;
+                }
+            }
+
+            .button:first-child {
+                padding: 10px 80px;
+                @include breakpoint(mobile){
+                    margin: 10px 0px;
+                    padding: 10px 0px;
+                    width: 100%;
+                }
+            }
+        }
+        
+    }
+
+    .detail-slide{
+
+        .swiper-wrapper{
+            justify-content: normal;
+        }
+
+    }
+
+    .about-third{
+
+        margin-top: 100px;
+
+        .site-content{
+            max-width: 960px;
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+
+            @include breakpoint(mobile){
+                font-size: 13px;
+
+            }
+        }   
+
+    }    
+
+
+}
+
+
+/*  事業者様ページ[about-company]
+------------------------------------------------------------ */
+
+.about-company{
+
+    .site-header{
+        margin-bottom: 0rem;
+    }
+
+    .jumbotron{
+
+        margin-top: 100px;
+
+        @include breakpoint(mobile){
+            margin-top:0px;
+        }
+
+
+
+        .jumbotron-overlay{
+            background: $main-color !important;
+            padding: 10px;
+
+            .jumbotron-content{
+                padding-bottom: 10px;
+                padding-top: 10px;
+            }
+            .jumbotron-title{
+                font-size: 24px;
+                color: #fff !important;
+                text-align: center;
+
+                @include breakpoint(mobile){
+                   text-align: left;
+                   font-size: 20px;
+                    
+                }
+            }
+        }
+
+    }
+    .about-first{
+        .container{
+          
+
+            @include breakpoint(mobile){
+                height: auto;
+                background-size: contain;
+
+            }
+            
+        
+            .site-content{
+                text-align: center;
+                font-weight: bold;
+                font-size: 20px;
+                padding: 100px 0px 0px;
+                max-width: 900px;
+
+                @include breakpoint(mobile){
+                    text-align: left;
+                    font-size: 17px;
+                    padding: 50px 0px 0px;
+
+    
+                }
+
+                ul{
+                    text-align: left;
+                    list-style:  none;      /* デフォルトのアイコンを消す */
+
+                    @include breakpoint(mobile){
+                       margin: 0;
+                         
+                     }
+
+                     li{
+                        @include breakpoint(mobile){
+                            margin: 20px 0px; 
+                          }
+                     }
+                }
+
+                li:before {
+                    content:  "";     /* 空の要素作成 */
+                    width:  16px;               /* 幅指定 */
+                    height:  16px;              /* 高さ指定 */
+                    display:  inline-block;     /* インラインブロックにする */
+                    background-color: $main-color ;  /* 背景色指定 */
+                    border-radius:  50%;        /* 要素を丸くする */
+                    margin-right: 10px;
+                }
+
+            }
+
+        }
+    }
+
+    .about-company-img{
+        margin: 100px 0px;
+        .container{
+            text-align: center;
+        }
+    }
+
+    .about-second{
+        margin-top: 100px;
+        .site-content{
+            max-width: 960px;
+
+            @include breakpoint(mobile){
+               padding: 0;
+
+            }
+
+            h3{
+                text-align: center;
+                border-top: 2px solid #000;
+                border-bottom: 2px solid #000;
+                padding: 20px 0px;
+                margin: 100px 0px;
+               
+                @include breakpoint(mobile){
+                    text-align: left;
+                    margin: 10px 0px;
+    
+                }
+            }
+
+            .site-content-in{
+                display: flex;
+                gap: 0px 80px;/*縦20px、横30pxの指定*/
+                margin: 120px 0px;
+
+                @include breakpoint(mobile){
+                    display: block;
+                    margin: 50px 0px;
+    
+                }
+
+                .site-content-in-cont{
+
+                   // border-bottom: 1px solid $main-color;
+                    width: 100%;
+                  
+
+                    h4{
+                        font-size:20px ;
+                        margin: 0 0 30px;
+                    }
+
+                    .Qa-Box {
+                      //  width: 80%;
+                        margin: 0 auto;
+                      }
+
+                      .Qa{
+                        border-bottom: 1px solid $main-color;
+                        padding: 20px 0px;
+                      }
+                      
+                      .Qa-Box .Qa dt,
+                      .Qa-Box .Qa dd {
+                        display: flex;
+                        align-items: baseline;
+                        margin: 30px 0;
+                      }
+                      
+                      .Qa-Box .Qa dt p {
+                        margin: 0;
+                     //   padding-left: 15px;
+                        font-weight: bold;
+                        width: 100%;
+                      }
+                      
+                      .Qa-Box .Qa dd p {
+                        margin: 0;
+                        padding-left: 15px;
+                        width: 100%;
+                      }
+                      
+                      .Qa-Box .Qa dt::before {
+                        content: "Q.";
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                       // background: #D65556;
+                        color: #000;
+                        width: 35px;
+                        height: 35px;
+                      }
+                      
+                    //   .Qa-Box .Qa dd::before {
+                    //     content: "A";
+                    //     display: flex;
+                    //     justify-content: center;
+                    //     align-items: center;
+                    //     background: #6699B7;
+                    //     color: #fff;
+                    //     width: 35px;
+                    //     height: 35px;
+                    //   }
+                }
+
+             
+            }
+        }
+
+    }
+
+    .about-third{
+
+        .site-content{
+            max-width: 960px;
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+
+            @include breakpoint(mobile){
+                font-size: 13px;
+
+            }
+        }   
+
+    }    
+}
+
+
+/*  学生ページ[about-students]
+------------------------------------------------------------ */
+
+.about-students{
+
+    .site-header{
+        margin-bottom: 0rem;
+    }
+
+    .jumbotron{
+
+        margin-top: 100px;
+
+        @include breakpoint(mobile){
+            margin-top:0px;
+        }
+
+
+
+        .jumbotron-overlay{
+            background: $main-color !important;
+            padding: 10px;
+
+            .jumbotron-content{
+                padding-bottom: 10px;
+                padding-top: 10px;
+            }
+            .jumbotron-title{
+                font-size: 24px;
+                color: #fff !important;
+                text-align: center;
+
+                @include breakpoint(mobile){
+                   text-align: left;
+                   font-size: 20px;
+                    
+                }
+            }
+        }
+
+    }
+    .about-first{
+        .container{
+          
+
+            @include breakpoint(mobile){
+                height: auto;
+                background-size: contain;
+
+            }
+            
+        
+            .site-content{
+                text-align: left;
+                font-weight: bold;
+                font-size: 20px;
+                padding: 100px 0px 0px;
+                max-width: 900px;
+
+                @include breakpoint(mobile){
+                    text-align: left;
+                    font-size: 17px;
+                    padding: 50px 0px 0px;
+
+    
+                }
+
+                ul{
+                    text-align: left;
+                    list-style:  none;      /* デフォルトのアイコンを消す */
+                }
+
+                li:before {
+                    content:  "";     /* 空の要素作成 */
+                    width:  16px;               /* 幅指定 */
+                    height:  16px;              /* 高さ指定 */
+                    display:  inline-block;     /* インラインブロックにする */
+                    background-color: $main-color ;  /* 背景色指定 */
+                    border-radius:  50%;        /* 要素を丸くする */
+                    margin-right: 10px;
+                }
+
+            }
+
+        }
+    }
+
+    .about-company-img{
+        margin: 100px 0px;
+        .container{
+            text-align: center;
+        }
+    }
+
+    .about-second{
+        margin-top: 100px;
+        .site-content{
+            max-width: 960px;
+
+            @include breakpoint(mobile){
+               padding: 0;
+
+            }
+
+            h3{
+                text-align: center;
+                border-top: 2px solid #000;
+                border-bottom: 2px solid #000;
+                padding: 20px 0px;
+                margin: 100px 0px;
+               
+                @include breakpoint(mobile){
+                    text-align: left;
+                    margin: 50px 0px;
+    
+                }
+            }
+
+            .site-content-in{
+                display: flex;
+                gap: 0px 80px;/*縦20px、横30pxの指定*/
+                margin: 120px 0px;
+
+                @include breakpoint(mobile){
+                    display: block;
+                    margin: 50px 0px;
+    
+                }
+
+                .site-content-in-cont{
+
+                   // border-bottom: 1px solid $main-color;
+                    width: 100%;
+                  
+
+                    h4{
+                        font-size:20px ;
+                        margin: 0 0 30px;
+                    }
+
+                    .Qa-Box {
+                      //  width: 80%;
+                        margin: 0 auto;
+                      }
+
+                      .Qa{
+                        border-bottom: 1px solid $main-color;
+                        padding: 20px 0px;
+                      }
+                      
+                      .Qa-Box .Qa dt,
+                      .Qa-Box .Qa dd {
+                        display: flex;
+                        align-items: baseline;
+                        margin: 30px 0;
+                      }
+                      
+                      .Qa-Box .Qa dt p {
+                        margin: 0;
+                     //   padding-left: 15px;
+                        font-weight: bold;
+                        width: 100%;
+                      }
+                      
+                      .Qa-Box .Qa dd p {
+                        margin: 0;
+                        padding-left: 15px;
+                        width: 100%;
+                      }
+                      
+                      .Qa-Box .Qa dt::before {
+                        content: "Q.";
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                       // background: #D65556;
+                        color: #000;
+                        width: 35px;
+                        height: 35px;
+                      }
+                      
+                    //   .Qa-Box .Qa dd::before {
+                    //     content: "A";
+                    //     display: flex;
+                    //     justify-content: center;
+                    //     align-items: center;
+                    //     background: #6699B7;
+                    //     color: #fff;
+                    //     width: 35px;
+                    //     height: 35px;
+                    //   }
+                }
+
+             
+            }
+        }
+
+    }
+
+    .about-third{
+
+        .site-content{
+            max-width: 960px;
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+
+            @include breakpoint(mobile){
+                font-size: 13px;
+
+            }
+        }   
+
+    }    
+}
+
+
+
+/*  SCHOOLページ
+------------------------------------------------------------ */
+
+.school-list{
+
+    .site-header{
+        background: $sub-color;
+        margin-bottom: 0rem;
+        padding-bottom: 100px;
+        
+        .List{
+          
+              
+        }
+
+    }
+
+    .head-img{
+        ul{
+            list-style: none;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            // flex-wrap: wrap;
+            // gap: 4% 4%;
+            li{
+                width: 47%;
+
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .head-txt{
+        h2{
+            font-size: 20px;
+            color: #f00;
+        }
+    }
+
+    .school-info{
+    
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            border-spacing: 0;
+    
+            th{
+                width: 20%;
+                background-color:unset;
+                padding-left: 30px;
+                font-weight: normal;
+    
+                
+             
+            }
+        }
+          
+        table th,table td{
+            // padding: 10px 0;
+            border: unset;
+            @include breakpoint(mobile){
+                display: block;
+                width: 100%;
+                padding: 5px;
+            }
+
+            a{
+                color: $main-color;
+            }
+        }
+          
+        table tr:nth-child(odd){
+            background-color: $sub-color;
+        }
+    
+        .return-btn{
+            padding: 0px;
+            border-radius: 25px;
+            background: $main-color;
+            margin: 60px auto;
+            display: block;
+            width: 250px;
+            height: 40px;
+
+            a{
+                color: #fff;
+                text-decoration: none;
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.loop-wrapper-college{
+    .recent-posts{
+        display: flex;
+        justify-content: space-between;
+
+        .post-full:after{
+            border: none;
+        }
+        .post-full{
+            width: 47%;
+
+            a{
+                text-decoration: none;
+                color: #000;
+            }
+
+            .post-thumbnail{
+                @include breakpoint(mobile){
+                    margin: 0;
+                }
+            }
+
+            .container-in-bottom{
+                display: flex;
+                justify-content: space-between;
+
+                @include breakpoint(mobile){
+                   display: block;
+                }
+
+                .contents-L{
+                    h3{
+                        margin-bottom: 0em;
+                        margin-top: 0em; 
+                        a{
+                            border: none;
+                        }  
+                    }
+                }
+
+                .contents-R{
+                    .news_date{
+                        font-size: 1rem;
+                    }   
+                }
+                
+            }
+
+        }
+
+    }
+}
+
+
+
+/* 
+------------------------------------------------------------ */
+
+
+/*
+////////////////////////////////////////////////
+// フッター
+*/
+
+.contact-cont{
+
+    background: #f4f5f6;
+    padding: 100px 0px;
+    text-align: center;
+
+    h2{
+        padding: 0;
+        margin: 0;
+
+        @include breakpoint(mobile){
+            font-size: 13px;
+        }
+       
+        
+    }
+
+    button {
+        background: #72D5D1;
+        width: 500px;
+        font-weight: bold;
+        border-radius: 30px;
+        margin: 30px 0px;
+        padding: 0;
+
+        a{
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            // width: 100%;
+            padding: 10px;
+        }
+    }
+    
+    
+}    
+
+
+.site-footer{
+    .site-bottom{
+        background: #707070;
+
+        .site-info{
+            width: 100%;
+            text-align: center;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        a{
+            color: #fff;
+        }
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+

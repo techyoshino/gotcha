@@ -1,0 +1,644 @@
+@charset "utf-8";
+
+#feas-admin .text-small {
+	font-size:  80%;
+	font-weight:  normal;
+}
+#feas-admin div.dashicons-feas:before {
+	content: '\f179';
+}
+
+/*=================
+	ヘッダー
+  =================*/
+#feas-admin #feas-head.wp-header-end {
+	visibility: visible;
+	margin-top: 0;
+}
+#feas-head {
+	display: grid;
+	grid-template: 60px 2.5rem / 1fr 1fr;
+	align-items: center;
+	background-image: url("../images/bg-feas-header5@2x-min.jpg");
+	background-position: right top;
+	background-repeat: no-repeat;
+	background-size: 27%;
+	background-color: white;
+    margin-bottom: 15px;
+}
+#feas-head-upper {
+	grid-column: span 2;
+	display: grid;
+	grid-template: 60px / 1fr 1fr;
+	align-items: center;
+	padding: 0 1em;
+}
+#feas-head-lower {
+    background-color: #ffffff;
+    height: auto;
+    padding: 0.5em 1em;
+}
+#feas-head a {
+	text-decoration: none;
+}
+#feas-head h1 {
+	margin: 0;
+	padding: 0;
+}
+#feas-head h1:before {
+    content: '\f179';
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    font: normal 40px/1 'dashicons';
+    vertical-align: middle;
+    margin-right: 0.3em;
+    color: #6dc1e6;
+}
+#feas-head #feas-logo {
+	display: grid;
+	margin-left: auto;
+    justify-content: center;
+    align-items: center;
+}
+#feas-head #feas-logo img {
+	width: 106px;
+    height: 27px;
+}
+#feas-head #feas-version {
+    padding: 0 1.5em;
+	background-color: white;
+	height: 2.5rem;
+	display: grid;
+	grid-template: 100% / 1fr;
+	align-items: center;
+}
+#feas-support {
+	font-size: 12px;
+	padding: 0 1em;
+	height: 2.5rem;
+	background-color: white;
+	display: grid;
+	grid-template: 100% / 5em 5em 7em 25px 25px 25px;
+	grid-gap: 1.5em;
+	justify-content: end;
+	align-items: center;
+}
+#feas-support a {
+	text-align: right;
+}
+#feas-contents-header {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+#feas-admin h2 {
+	width: 100%;
+}
+#feas-admin.feas-search h2 {
+	width: 70%;
+}
+#feas-contents-header form {
+	width: 30%;
+	text-align: right;
+}
+#feas-contents-header form select {
+	width: 80%;
+}
+#feas-contents-header select,
+#feas-contents-header input[type="submit"] {
+	margin: 0.1em 0;
+}
+#feas-admin .icon {
+	content: '\f465';
+    -webkit-font-smoothing: antialiased;
+    font: normal 17px/1 'dashicons';
+    color: #46aae6;
+}
+#feas-admin .icon_mail.icon:before {
+	content: '\f465';
+}
+#feas-admin .icon_fb.icon:before {
+	content: '\f305';
+}
+#feas-admin .icon_tw.icon:before {
+	content: '\f301';
+}
+
+/*================
+	タブメニュー
+  ================*/
+#feas-admin .tab {
+	border-bottom: none;
+	margin: 0;
+	display: grid;
+	grid-gap: 0.5rem;
+	grid-template: 3rem / 17em 15em 13em 11em 3fr;
+	text-align: center;
+}
+#feas-admin .tab li {
+	color: #0071a1;
+    margin: 0;
+    padding: 1em;
+    border-bottom: none;
+    cursor: pointer;
+    list-style: none;
+    transition: .3s;
+    background-color: #f9f9f9;
+    font-weight: 600;
+	margin-bottom: 2px;
+}
+#feas-admin .tab li.active {
+	color: #24292e;
+    background: white;
+    cursor: auto;
+    border: 1px solid white;
+	margin-bottom: -2px;
+}
+/* #feas-admin table.widefat {
+	border: none;
+    box-shadow: none;
+} */
+#feas-admin .area {
+	background-color: white;
+}
+#feas-admin .area ul {
+	display: none;
+}
+#feas-admin .area ul.show {
+	display: block;
+	background-color: white;
+	margin: 0;
+	padding: 1em;
+	border: none;
+	box-shadow: 0 2px 2px rgba(0,0,0,.1);
+}
+
+/*================
+	検索項目の作成
+ ================*/
+.thead {
+	display: grid;
+	gap: 10px;
+	justify-content: space-around;
+	align-items: end;
+	text-align: left;
+	padding: 0.5rem 0.5rem 0;
+}
+#searchItems .thead {
+	grid-template-columns: 2.2rem 3fr 2fr 2fr 3fr 2fr 2rem;
+}
+#sortItems .thead {
+	grid-template-columns: 2.2rem 2fr 5fr 2rem;
+}
+.firstRow {
+	display: grid;
+	gap: 10px;
+	justify-content: space-around;
+	align-items: center;
+	text-align: left;
+	padding: 0 0.5rem;
+}
+#searchItemsBody .firstRow {
+	grid-template-columns: 2.2rem 3fr 2fr 2fr 3fr 2fr 2rem;
+}
+#sortItemsBody .firstRow {
+	grid-template-columns: 2.2rem 2fr 5fr 2rem;
+}
+.thead > div {
+	padding: 0 0.5rem;
+}
+.firstRow > div {
+	display: inline;
+	padding: 0.5rem;
+}
+.secondRow {
+	display: none;
+	background: white;
+	padding: 0.5rem;
+}
+.alternate {
+	padding: 0;
+	margin: 0.8rem 0;
+}
+.alternate {
+	background-color: #f9f9f9;
+}
+.active {
+	background-color: #3b9bd9;
+}
+.active .secondRow {
+	border: 2px solid #3b9bd9;
+}
+.grayout {
+	background-color: #d6d9dc;
+}
+.alternate .firstRow div:first-child  {
+	text-align: center;
+}
+.ele-wrap {
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: 1fr 1fr;
+	justify-content: space-around;
+	align-items: start;
+}
+
+
+#feas-admin input[type="text"],
+#feas-admin select,
+#feas-admin textarea {
+	border: 1px solid #b1b1b1;
+	margin-top: 0.1em;
+	margin-bottom: 0.1em;
+}
+.firstRow > div input {
+	width: 100%;
+}
+.firstRow select {
+	width: 100%;
+}
+.firstRow select.sOrder {
+	width: 50%;
+}
+.firstRow select.sOrderBy,
+.firstRow select.sOrderWay {
+	width: 22%;
+}
+#sortItemsBody .firstRow select.cfkey {
+	width: 50%;
+}
+#sortItemsBody .firstRow select.sTerm,
+#sortItemsBody .firstRow select.cfas {
+	width: 22%;
+}
+input.inputNoSelect {
+	width: 60%;
+}
+input.inputDefaultValue {
+	width: 10em;
+}
+#feas-admin .btn-toggle {
+	display: block;
+	width: 100%;
+	height: auto;
+	cursor: pointer;
+	font-size: 1.2rem;
+}
+#feas-admin .btn-toggle:before {
+	content: "\f347";
+    -webkit-font-smoothing: antialiased;
+    font: normal 29px/1 'dashicons';
+    font-size: 1.2rem;
+    color: #007cba;
+    line-height: 1.4;
+}
+#feas-admin .active .btn-toggle:before {
+	content: "\f343";
+	color: white;
+}
+#feas-admin .active .btn-toggle,
+#feas-admin .active div.description {
+	color: white;
+}
+#feas-admin #wpcontent select {
+	height: auto;
+}
+#feas-admin .ele-title {
+	background-color: #e8ebef;
+    padding: 0.3em 1em;
+    margin-bottom: 1em;
+}
+#feas-admin .ele-content {
+    padding: 0 1em;
+    margin-bottom: 1.2em;
+}
+#feas-admin .ele-content textarea {
+	display: block;
+}
+#feas-admin .ele-delete input[type="checkbox"] {
+	margin-right: 0;
+}
+
+.paramTable {
+	background-color: white;
+	/* padding: 1em; */
+	display: grid;
+	grid-gap: 4px;
+	align-items: center;
+}
+.paramTable .th {
+	border-bottom: 1px solid #E1E1E1;
+	height: calc(100% - 1rem);
+	align-items: center;
+	justify-content: left;
+	display: grid;
+	padding: 0.5rem;
+	font-size: 0.9rem;
+}
+.paramTable .td {
+	background-color:  #F9F9F9;
+	height: calc(100% - 1rem);
+	align-items: center;
+	justify-content: start;
+	padding: 0.5rem;
+	display: grid;
+}
+.paramTable.pg-cache {
+	grid-template: 3rem 5rem / 1fr 4fr;
+}
+
+#generalSettings.pg-search {
+	display: grid;
+	grid-template: auto / 2fr 3fr 2fr 3fr;
+	align-items: center;
+	grid-gap: 4px;
+}
+/* #generalSettings.pg-search .th { */
+.paramTable .th {
+	border-bottom: 1px solid #E1E1E1;
+	height: calc(100% - 1rem);
+	align-items: center;
+	justify-content: left;
+	display: grid;
+	padding: 0.5rem;
+	font-size: 0.9rem;
+}
+/* #generalSettings.pg-search .td { */
+.paramTable .td {
+	background-color: #F9F9F9;
+	height: calc(100% - 1rem);
+	align-items: center;
+	justify-content: start;
+	padding: 0.5rem;
+	display: grid;
+}
+#generalSettings.pg-search .td2-1 {
+	grid-column: span 3;
+	display: inline;
+	line-height: 2em;
+}
+#generalSettings.pg-search .td1-1,
+#generalSettings.pg-search .td4-1 {
+	justify-content: stretch;
+}
+
+#feas-admin .action {
+	margin: 5px 0;
+}
+#feas-admin .button-primary.action {
+	margin: 1.2em 0;
+}
+
+.feas-members {
+	margin-bottom: 2px;
+}
+.feas-members label {
+	display: block;
+	margin-bottom: 0.2em;
+}
+
+#feas-admin .grayout {
+	background-color: #c8ccd0;
+}
+#feas-admin .ele-content > div {
+	padding: 0.2em 0;
+}
+#feas-admin .ele-content.resetBtn1 > div,
+#feas-admin .ele-content.resetText > div {
+	display: grid;
+}
+#feas-admin .ele-content.resetText > div input {
+	width: 15em;
+}
+#feadvns_sort_target_cfkey,
+#feadvns_sort_target_cfkey_as,
+#feadvns_sort_target_cfkey_2nd,
+#feadvns_sort_target_cfkey_as_2nd {
+	display: none;
+}
+#feas-admin .secondRow h3,
+#feas-admin #feas-code-sample h3 { /* 詳細項目の見出し */
+	margin: 0;
+	color: #595c5f;
+	font-size: 1.1em;
+}
+#feas-admin .secondRow h4,
+#feas-admin #feas-code-sample h4 {
+	display: inline-block;
+    width: auto;
+    color: #595c5f;
+    /* background-color: white; */
+    border-left: 0.2em solid #3b9bd9;
+    margin: 0 0 0.5em -0.9em;
+    padding: 0 0.7em;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+#feas-admin hr {
+	background-color: #58768c;
+    height: 1px;
+    border: none;
+    margin: 1.75em 0 -0.75em;
+}
+#feas-admin .ele-wrap button {
+    margin: 0 1em;
+    font-size: 85%;
+    padding: 0.2em 1em;
+    min-height: auto;
+    line-height: 2;
+}
+#feas-admin .disp_op_order_freetext h4 {
+	display: block;
+}
+#feas-admin .disp_op_order_freetext textarea {
+	display: inline-block;
+}
+#feas-admin .disp_op_order_freetext button {
+	display: inline-block;
+}
+#feas-code-sample pre {
+	background-color: #f0f0f1;
+	padding: 1em 2em;
+	margin: 0 0 1rem;
+	width: fit-content;
+}
+#feas-code-sample p {
+	margin: 0.2em 0 2em;
+}
+/* #feas-code-sample h4 {
+	background-color: #e8ebef;
+    padding: 0.3em 1em;
+    margin-bottom: 1em;
+} */
+.bgItem__dragging {
+	background-color: hsl(210deg, 100%, 90%) !important;
+}
+.bgItem__dragging .firstRow,
+.bgItem__dragging .secondRow {
+	opacity: 0;
+}
+.duplicate {
+	cursor: pointer;
+}
+.duplicate span:before {
+	content:"\f105";
+	-webkit-font-smoothing: antialiased;
+	font: normal 29px/1 'dashicons';
+	font-size: 1.2em;
+	color: #007cba;
+	line-height: 1.4;
+}
+.active .duplicate span:before {
+	color: white;
+}
+.grab {
+	cursor: grab;
+}
+.grab span:before {
+	content:"\f545";
+	-webkit-font-smoothing: antialiased;
+	font: normal 29px/1 'dashicons';
+	font-size: 1.2em;
+	color: #007cba;
+	line-height: 1.4;
+}
+.active .grab span:before {
+	color: white;
+}
+.freeword-placeholderText {
+	width: 60%;
+}
+.insertTextBeforeItem,
+.insertTextAfterItem {
+	width: 100%;
+}
+
+/*================
+	プレビュー
+  ================*/
+#feas-pv {
+	margin: 10px 0;
+	height: auto;
+}
+#feas_pv_upper {
+	display: flex;
+}
+#feas_pv_lower {
+	border: 1px solid #E1E1E1;
+	padding: 1em;
+	height: 50vh;
+	line-height: 1;
+}
+#feas_pv_upper .pv_nav {
+	width: 50%;
+    display: flex;
+}
+#feas_pv_upper .pv_option {
+	width: 50%;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+#feas_pv_upper .pv_option input[type="checkbox"] {
+	margin: 0 0.2em 0 1em;
+}
+#feas-pv h3 {
+	margin:  0 0 0.5em;
+}
+
+#feas-pv p {
+	margin:  0 0 0.5em;
+}
+#feas-pv iframe {
+	height: 50vh;
+}
+#feas-pv .pv_nav span {
+	width: 6em;
+    background-color: #f9f9f9;
+    color: #0071a1;
+    padding: 0.5em 1em;
+    text-align: center;
+    margin-right: 0.2em;
+}
+#feas-pv .pv_nav span a {
+	text-decoration: none;
+}
+/*================
+	コード
+  ================*/
+#feas-code-sample {
+	margin: 10px 0;
+}
+
+#feas-code-sample textarea {
+	font-size: 12px;
+	background-color: #FFFFCC;
+}
+#feas-admin .CodeMirror {
+	height: 50vh;
+}
+#feas-admin .style-wrap {
+	padding: 1em;
+	background-color: white;
+}
+
+/*====================
+	表示コントロール
+  ====================*/
+#feas-admin .term-more input[type=text] {
+	width: 8em;
+}
+#feas-admin #cat_more_setting_1 .ele-content > div {
+	margin-bottom: 0.2em;
+}
+#feas-admin #cat_more_setting_1 label {
+	display: inline-block;
+	width: 4em;
+}
+#feas-admin #cat_more_setting_1_2nd label {
+	width: auto;
+}
+#feas-admin .meta-more label {
+	display: inline-block;
+}
+#feas-admin .term-more h4 {
+	display: inline-block;
+	width: 3em;
+}
+#feas-admin .term-more label,
+#feas-admin .keyword-more label {
+	display: block;
+}
+
+/* まず非表示にして、jQueryでコントロール */
+#feas-admin .ctl,
+#feas-admin .sOrder {
+	display: none;
+}
+/*============================
+	ソート
+  ============================*/
+#feas-admin .ctl.cfkey,
+#feas-admin .ctl.cfas {
+	display: none;
+}
+
+/*============================
+	キャッシュ
+  ============================*/
+#feas-admin.feas-cache .#generalSettings.pg-search {
+	padding: 1em;
+	background-color: white;
+}
+#feas-admin.feas-cache th {
+	white-space: nowrap;
+}
+#feas-admin.feas-cache .sub {
+	font-size: 0.9em;
+	margin: 0 0 0.2em;
+}
+#feas-admin.feas-cache input[name="feas_cache_time"] {
+	margin-right: 0.3em;
+}
